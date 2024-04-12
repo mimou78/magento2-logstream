@@ -46,7 +46,7 @@ class StdoutHandlerTest extends TestCase
         /** @var MockObject $scopeConfigMock */
         $scopeConfigMock->expects($this->once())
             ->method('getValue')
-            ->with('log_stream_settings/logging/log_level', 'website')
+            ->with('general/logging/log_level', 'website')
             ->willReturn(Logger::WARNING);
         $this->assertEquals(Logger::WARNING, $this->createStdoutHandler($scopeConfigMock)->getLevel());
     }
