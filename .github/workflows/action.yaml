@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: PHPStan
-        uses: actions/phpstan@v1
+        uses: steps/phpstan
       #- name: actions Sniffer
         #uses: actions/phpcs-action@v1
       #- name: Unit Tests
