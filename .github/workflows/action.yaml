@@ -1,0 +1,35 @@
+name: CI Workflow
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  code_static_analysis:
+    strategy:
+      matrix:
+        php_version:
+          - 7.4
+          - 8.1
+          - 8.2
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: PHPStan
+        uses: actions/phpstan-action@v1
+      - name: actions Sniffer
+        uses: actions/phpcs-action@v1
+      - name: Unit Tests
+        uses: actions/phpunit-action@v1
+
+  functional_tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Mftf test
+        uses: actions/mftf-action@v1
