@@ -1,0 +1,34 @@
+{
+    "name": "cleatsquad/magento2-logstream",
+    "description": "A Magento 2 module to redirect all logs to StdOut, ideal for dockerized environments.",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": "MIT",
+    "require-dev": {
+        "phpunit/phpunit": "^9",
+        "friendsofphp/php-cs-fixer": "^2.18"
+    },
+    "require": {
+        "php": ">=8.1",
+        "monolog/monolog": "^2.0",
+        "magento/framework": "*",
+        "magento/module-store": "*"
+    },
+    "authors": [
+        {
+            "name": "Mohamed El Mrabet",
+            "homepage": "https://www.cleatsquad.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "files": [ "src/registration.php" ],
+        "psr-4": {
+            "CleatSquad\\Magento2LogStream\\": "src"
+        }
+    },
+    "scripts": {
+        "test": "@php vendor/bin/phpunit",
+        "phpstan": "@php vendor/bin/phpstan analyse"
+    }
+}

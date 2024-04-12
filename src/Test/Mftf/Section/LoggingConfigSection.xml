@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sections xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:mftf:Page/etc/SectionObject.xsd">
+    <section name="LoggingConfigSection">
+        <element name="CheckIfTabExpand" type="button" selector="#general_logging-head:not(.open)"/>
+        <element name="Logging" type="button" selector="#general_logging-head"/>
+        <element name="logLevel" type="select" selector="#general_logging_log_level"/>
+        <element name="Save" type="button" selector="#save" timeout="30"/>
+    </section>
+</sections>

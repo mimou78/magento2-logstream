@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="urn:magento:mftf:Test/etc/testSchema.xsd">
+    <test name="ChangeLogLevelTest">
+        <annotations>
+            <features value="CleatSquad Magento2 LogStream"/>
+            <stories value="Change Log Level"/>
+            <title value="Change Log Level in Admin"/>
+            <description value="Test changing the log level from the Magento admin panel."/>
+            <severity value="CRITICAL"/>
+            <group value="Test"/>
+        </annotations>
+        <before>
+            <magentoCLI command="config:set {{AdminGeneralSetLogLevelConfigData.path}} {{AdminGeneralSetLogLevelConfigData.value}}" stepKey="setDefaultLevelLog"/>
+            <magentoCLI command="cache:clean" arguments="full_page config" stepKey="cleanSpecifiedCache"/>
+        </before>
+        <after>
+            <magentoCLI command="config:set {{AdminGeneralSetLogLevelConfigData.path}} {{AdminGeneralSetLogLevelConfigData.value}}" stepKey="setDefaultLevelLog"/>
+            <magentoCLI command="cache:clean" arguments="full_page config" stepKey="cleanSpecifiedCache"/>
+        </after>
+        <actionGroup ref="AdminLoginActionGroup" stepKey="loginToAdmin"/>
+        <waitForPageLoad stepKey="waitForAdminLoginPageLoad"/>
+        <amOnPage url="{{AdminConfigPage.url}}" stepKey="navigateToLoggingSettings" />
+        <waitForPageLoad stepKey="waitForOpenLoggingSettings"/>
+        <seeInCurrentUrl url="{{AdminConfigPage.url}}" stepKey="seeLoggingSettingsUrl"/>
+        <seeInField selector="{{LoggingConfigSection.logLevel}}" userInput="{{AdminGeneralSetLogLevelConfigData.value}}" stepKey="seeDefaultLogLevel"/>
+        <conditionalClick selector="{{LoggingConfigSection.Logging}}" dependentSelector="{{LoggingConfigSection.CheckIfTabExpand}}" stepKey="checkIfTabOpen" visible="true"/>
+        <selectOption selector="{{LoggingConfigSection.logLevel}}" userInput="400" stepKey="selectLogLevel"/>
+        <click selector="{{LoggingConfigSection.Save}}" stepKey="saveConfig"/>
+        <see userInput="You saved the configuration." stepKey="seeSuccessMessage"/>
+        <seeInField selector="{{LoggingConfigSection.logLevel}}" userInput="400" stepKey="seeSelectedLogLevel"/>
+        <actionGroup ref="AdminLogoutActionGroup" stepKey="logoutOfAdmin"/>
+    </test>
+</tests>
