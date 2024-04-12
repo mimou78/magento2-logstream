@@ -30,5 +30,11 @@
     "scripts": {
         "test": "@php vendor/bin/phpunit",
         "phpstan": "@php vendor/bin/phpstan analyse"
+    },
+    "repositories": {
+        "0": {
+            "type": "composer",
+            "url": "https://repo.magento.com/"
+        }
     }
 }
