@@ -25,3 +25,5 @@ runs:
       uses: shivammathur/setup-php@v2
       with:
         php-version: ${{ inputs.php_version }}
+
+    - run: php -v
