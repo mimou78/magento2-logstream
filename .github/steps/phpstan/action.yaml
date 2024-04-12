@@ -5,6 +5,10 @@ inputs:
     required: true
     default: "8.1"
     description: "PHP Version to use"
+  magento_version:
+    required: true
+    default: "2.4.6"
+    description: "Magento Version to use"
   source_folder:
     required: true
     default: .
