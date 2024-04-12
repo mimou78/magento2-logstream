@@ -24,7 +24,7 @@
     "autoload": {
         "files": [ "src/registration.php" ],
         "psr-4": {
-            "CleatSquad\\Magento2LogStream\\": "src"
+            "CleatSquad\\LogStream\\": "src"
         }
     },
     "scripts": {

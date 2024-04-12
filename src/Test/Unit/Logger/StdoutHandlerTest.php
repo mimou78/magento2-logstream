@@ -1,17 +1,17 @@
 <?php
 
-namespace CleatSquad\Magento2LogStream\Test\Unit\Logger;
+namespace CleatSquad\LogStream\Test\Unit\Logger;
 
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Monolog\Formatter\JsonFormatter;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
-use CleatSquad\Magento2LogStream\Logger\StdoutHandler;
+use CleatSquad\LogStream\Logger\StdoutHandler;
 use Monolog\Logger;
 
 /*
  * Class StdoutHandlerTest
- * @covers CleatSquad\Magento2LogStream\Logger\StdoutHandler
+ * @covers CleatSquad\LogStream\Logger\StdoutHandler
  */
 class StdoutHandlerTest extends TestCase
 {

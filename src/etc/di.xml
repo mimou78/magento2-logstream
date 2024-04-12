@@ -4,11 +4,11 @@
    <type name="Magento\Framework\Logger\Monolog">
         <arguments>
             <argument name="handlers"  xsi:type="array">
-                <item name="stdout" xsi:type="object">CleatSquad\Magento2LogStream\Logger\StdoutHandler</item>
+                <item name="stdout" xsi:type="object">CleatSquad\LogStream\Logger\StdoutHandler</item>
             </argument>
         </arguments>
     </type>
-    <type name="CleatSquad\Magento2LogStream\Logger\StdoutHandler">
+    <type name="CleatSquad\LogStream\Logger\StdoutHandler">
         <arguments>
             <argument name="formatter" xsi:type="object">Monolog\Formatter\LineFormatter</argument>
         </arguments>

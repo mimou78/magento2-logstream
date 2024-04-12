@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CleatSquad\Magento2LogStream\Logger;
+namespace CleatSquad\LogStream\Logger;
 
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Store\Model\ScopeInterface;

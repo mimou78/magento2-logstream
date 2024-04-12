@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CleatSquad\Magento2LogStream\Model\Config\Source;
+namespace CleatSquad\LogStream\Model\Config\Source;
 
 use Magento\Framework\Data\OptionSourceInterface;
 use Magento\Framework\Phrase;

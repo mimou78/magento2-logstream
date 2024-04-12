@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace CleatSquad\Magento2LogStream\Test\Unit\Model\Config\Source;
+namespace CleatSquad\LogStream\Test\Unit\Model\Config\Source;
 
 use PHPUnit\Framework\TestCase;
-use CleatSquad\Magento2LogStream\Model\Config\Source\LogLevel;
+use CleatSquad\LogStream\Model\Config\Source\LogLevel;
 use Monolog\Logger;
 
 /**
  * Class LogLevelTest
- * @covers \CleatSquad\Magento2LogStream\Model\Config\Source\LogLevel
+ * @covers \CleatSquad\LogStream\Model\Config\Source\LogLevel
  */
 class LogLevelTest extends TestCase
 {
