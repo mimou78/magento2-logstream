@@ -58,7 +58,8 @@ jobs:
         uses: extdn/github-actions-m2/magento-integration-tests/8.1@master
         with:
           module_name: CleatSquad_LogStream
-          composer_name: cleatsquad/magento2-logstream
+          composer_name: cleatsquad/magento2-logstream,
+          composer_version: 2,
           ce_version: '2.4.6'
       #- name: Mftf test
         #uses: actions/mftf-action@v1
