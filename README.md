@@ -2,7 +2,7 @@
 
 [![Packagist Downloads](https://img.shields.io/packagist/dm/cleatsquad/magento2-logstream?color=blue)](https://packagist.org/packages/cleatsquad/magento2-logstream/stats)
 [![Packagist Version](https://img.shields.io/packagist/v/cleatsquad/magento2-logstream?color=blue)](https://packagist.org/packages/cleatsquad/magento2-logstream)
-[![Packagist License](https://img.shields.io/packagist/l/cleatsquad/magento2-logstream)](https://github.com/cleatsquad/magento2-logstream/blob/main/LICENSE)
+[![Packagist License](https://img.shields.io/packagist/l/cleatsquad/magento2-logstream)](https://github.com/cleatsquad/magento2-logstream/blob/master/LICENSE)
 
 ## Magento Version Support
 
