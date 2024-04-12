@@ -27,7 +27,7 @@ runs:
         php-version: ${{ inputs.php_version }}
 
     - name: Setup Magento
-      uses: cleatsquad/setup-magento@v1
+      uses: cleatsquad/setup-magento@main
       with:
         magento_version: ${{ inputs.magento_version }}
         COMPOSER_AUTH: ${{ inputs.composer_auth }}
