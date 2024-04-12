@@ -21,10 +21,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ inputs.php_version }}
+
       - name: Get Composer Cache Directory
         shell: bash
         working-directory: ${{ inputs.source_folder }}
