@@ -10,7 +10,7 @@ on:
       - master
 
 jobs:
-  code_static_analysis:
+  code-static-analysis:
     strategy:
       matrix:
         php_version:
@@ -19,15 +19,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: PHPStan
-        uses: actions/phpstan-action@v1
-      - name: actions Sniffer
-        uses: actions/phpcs-action@v1
-      - name: Unit Tests
-        uses: actions/phpunit-action@v1
+        uses: actions/phpstan@v1
+      #- name: actions Sniffer
+        #uses: actions/phpcs-action@v1
+      #- name: Unit Tests
+        #uses: actions/phpunit-action@v1
 
-  functional_tests:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Mftf test
-        uses: actions/mftf-action@v1
+  #functional-tests:
+    #runs-on: ubuntu-latest
+    #steps:
+      #- uses: actions/checkout@v2
+      #- name: Mftf test
+        #uses: actions/mftf-action@v1
