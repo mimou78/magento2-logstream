@@ -13,6 +13,9 @@ inputs:
     required: true
     default: .
     description: "The source folder of the package"
+  composer_auth:
+    description: "Composer authentication JSON"
+    required: false
 jobs:
   phpstan:
     runs-on: ubuntu-latest

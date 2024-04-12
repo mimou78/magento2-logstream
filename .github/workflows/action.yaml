@@ -21,10 +21,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: PHPStan
-        uses: .github/steps/phpstan
+        uses: actions/phpstan
         with:
           php_version: ${{ matrix.php }}
           magento_version: ${{ matrix.magento_version }}
+          composer_auth: '${{ secrets.COMPOSER_AUTH }}'
       #- name: actions Sniffer
         #uses: actions/phpcs-action@v1
       #- name: Unit Tests
