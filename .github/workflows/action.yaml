@@ -21,7 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: PHPStan
-        uses: actions/phpstan
+        uses: ./.github/actions/phpstan
         with:
           php_version: ${{ matrix.php }}
           magento_version: ${{ matrix.magento_version }}
