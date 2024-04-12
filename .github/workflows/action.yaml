@@ -21,7 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: PHPStan
-        uses: extdn/github-actions-m2/magento-phpstan/${{ matrix.php }}@master
+        uses: extdn/github-actions-m2/magento-phpstan/8.1@master
         with:
           composer_name: cleatsquad/magento2-logstream
       #- name: actions Sniffer
