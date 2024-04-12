@@ -25,18 +25,3 @@ runs:
       uses: shivammathur/setup-php@v2
       with:
         php-version: ${{ inputs.php_version }}
-
-    - name: Get Composer Cache Directory
-      shell: bash
-      working-directory: ${{ inputs.source_folder }}
-      id: composer-cache
-      run: |
-        echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
-    - run: composer install
-      name: Require and attempt install
-      working-directory: ${{ inputs.source_folder }}
-      shell: bash
-      env:
-        COMPOSER_CACHE_DIR: ${{ steps.composer-cache.outputs.dir }}
-        COMPOSER_AUTH: ${{ inputs.composer_auth }}
-    - run: composer require --dev phpstan/phpstan
