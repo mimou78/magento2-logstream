@@ -32,4 +32,3 @@ runs:
         magento_version: ${{ inputs.magento_version }}
         COMPOSER_AUTH: ${{ inputs.composer_auth }}
 
-    - run: php -v
