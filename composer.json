@@ -36,5 +36,12 @@
             "type": "composer",
             "url": "https://repo.magento.com/"
         }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "magento/composer-dependency-version-audit-plugin": true
+        }
     }
 }
