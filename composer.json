@@ -28,7 +28,7 @@
     },
     "scripts": {
         "unit-test": "vendor/bin/phpunit ./src/Test/Unit",
-        "phpstan": "@php vendor/bin/phpstan analyse"
+        "phpstan": "vendor/bin/phpstan analyse ./src/"
     },
     "repositories": {
         "0": {

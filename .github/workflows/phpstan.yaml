@@ -1,4 +1,4 @@
-name: Unit Test
+name: phpStan
 
 on:
   workflow_dispatch: {}
@@ -33,4 +33,4 @@ jobs:
         with:
           php_version: ${{ matrix.php_version }}
           composer_auth: ${{ secrets.COMPOSER_AUTH }}
-          test_command: composer run unit-test
+          test_command: composer run phpstan
