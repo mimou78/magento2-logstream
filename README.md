@@ -10,7 +10,7 @@
 
 ## Purpose
 
-`CleatSquad_Magento2LogStream` is a Magento 2 module designed to redirect all Magento logs to StdOut, which is particularly useful in dockerized environments. This approach facilitates the aggregation of logs into external systems without the need to manage Magento-specific log files and configurations.
+`CleatSquad_LogStream` is a Magento 2 module designed to redirect all Magento logs to StdOut, which is particularly useful in dockerized environments. This approach facilitates the aggregation of logs into external systems without the need to manage Magento-specific log files and configurations.
 
 ## Getting Started
 
@@ -25,7 +25,7 @@ This module is intended to be installed via [Composer](https://getcomposer.org/)
 
 2. **Enable the module**
     ```bash
-    ./bin/magento module:enable CleatSquad_Magento2LogStream
+    ./bin/magento module:enable CleatSquad_LogStream
     ./bin/magento setup:upgrade
     ```
 
@@ -59,7 +59,7 @@ For the latest updates and new features, follow our GitHub repository: [cleatsqu
 
 ## Contributing
 
-Contributions to `CleatSquad_Magento2LogStream` are always welcome. You can contribute in different ways:
+Contributions to `CleatSquad_LogStream` are always welcome. You can contribute in different ways:
 
 1. **Report Issues**: Report bugs and suggest new features.
 2. **Fix Bugs**: Submit pull requests with bug fixes.
